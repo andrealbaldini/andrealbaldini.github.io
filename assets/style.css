@@ -75,6 +75,18 @@ ul.pubs{list-style:none;margin:0;padding:0}
 .portrait.left{float:left;margin:.2rem 1.4rem 1rem 0;transform:rotate(-1.2deg);width:min(40%,16rem)}
 .card::after{content:"";display:block;clear:both}
 @media(max-width:34rem){.portrait,.portrait.left{float:none;width:100%;margin:0 0 1rem;transform:none}}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:1.8rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,7.2vw,4.3rem)}
+.hero-photo{position:relative;margin:0;padding:.5rem .5rem .7rem;background:var(--sheet);border:2px solid var(--ink);transform:rotate(1.6deg)}
+.hero-photo::before{content:"";position:absolute;width:4rem;height:1.3rem;background:rgba(255,71,200,.55);top:-.7rem;left:50%;margin-left:-2rem;transform:rotate(-4deg);filter:url(#line)}
+.hero-photo img{display:block;width:100%;height:auto;border:1px solid var(--ink)}
+.hero-photo figcaption{font-size:.78rem;color:var(--muted);margin-top:.5rem;line-height:1.35}
+.hero-photo figcaption .hand{display:block;color:var(--ink);font-size:1.1rem;line-height:1.1;margin-bottom:.15rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.pub.compact{padding:.6rem 0}
+.pub.compact .cite{font-size:.95rem;line-height:1.35}
+.cols h2{font-size:1.6rem}
+@media(max-width:44rem){.hero{grid-template-columns:1fr}.cols{grid-template-columns:1fr;gap:1.2rem}.hero-photo{max-width:22rem;margin:0 auto}}
 .dragon{display:inline-block;font-size:1.05rem;transform:rotate(-2deg)}
 footer{padding:1rem 0 3rem;font-size:.9rem;color:var(--muted)}
 footer p{margin:.2rem 0}
